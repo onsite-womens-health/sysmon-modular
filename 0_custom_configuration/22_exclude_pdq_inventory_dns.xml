@@ -1,0 +1,12 @@
+<!-- Exclude PDQ Inventory Service DNS Queries
+This configuration file excludes DNS queries made by the PDQ Inventory Service from Sysmon logging. This is useful for reducing noise in logs and focusing on more relevant events. -->
+
+<Sysmon schemaversion="4.30">
+    <EventFiltering>
+        <RuleGroup name="DnsQuery" groupRelation="or">
+            <DnsQuery onmatch="exclude">
+                <Image condition="is">C:\Program Files (x86)\Admin Arsenal\PDQ Inventory\PDQInventoryService.exe</Image>
+            </DnsQuery>
+        </RuleGroup>
+    </EventFiltering>
+</Sysmon>
