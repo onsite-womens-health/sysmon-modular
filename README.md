@@ -1,6 +1,6 @@
 # This is the initial commit to quiet down the PDQ Inventory DNS calls being sent through SYSMON and being parsed by GrayLog. It is placed in the 0_custom_configuration folder per the author's directions for utilizing their repo.
 
-# The OWH_Merge_Sysmon.ps1 should work to merge any .xml files found in the 0_custom_configuration folder. This should be neater and not put all of changes into a single monolithic .xml file should we end up adding more rules to tis folder.
+# The OWH_Merge_Sysmon.ps1 should work to merge any .xml files found in the 0_custom_configuration folder. This should be neater and not put all of changes into a single monolithic .xml file should we end up adding more rules to this folder.
 
 #
 
