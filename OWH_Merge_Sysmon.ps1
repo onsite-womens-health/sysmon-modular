@@ -2,7 +2,7 @@
 $scriptDirectory = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 # Define the relative paths to the root and custom configuration directories
-$rootConfigFile = Join-Path $scriptDirectory 'sysmonconfig-with-filedelete.xml'
+$rootConfigFile = Join-Path $scriptDirectory 'sysmonconfig.xml'
 $customXmlFolder = Join-Path $scriptDirectory '0_custom_configuration'
 
 # Print out the base XML file being used
@@ -40,5 +40,5 @@ foreach ($xmlFile in $xmlFiles) {
 }
 
 # Save the merged XML into a new output file
-$mergedXml.Save("OWH_sysmonconfig-with-filedelete.xml")
-Write-Host "Successfully merged XML files into OWH_sysmonconfig-with-filedelete.xml"
+$mergedXml.Save("OWH_sysmonconfig.xml")
+Write-Host "Successfully merged XML files into OWH_sysmonconfig.xml"
