@@ -2700,6 +2700,11 @@
         <TargetFilename condition="begin with">C:\Windows\SysWOW64\Tasks</TargetFilename>
       </FileExecutableDetected>
     </RuleGroup>
+    <RuleGroup name="" groupRelation="or">
+      <RegistryEvent onmatch="exclude">
+        <Image condition="is">d:\CoreGateway\bin\fd\FireDaemon.exe</Image>
+      </RegistryEvent>
+    </RuleGroup>
     <RuleGroup name="DnsQuery" groupRelation="or">
       <DnsQuery onmatch="exclude">
         <Image condition="is">C:\Program Files (x86)\Admin Arsenal\PDQ Inventory\PDQInventoryService.exe</Image>

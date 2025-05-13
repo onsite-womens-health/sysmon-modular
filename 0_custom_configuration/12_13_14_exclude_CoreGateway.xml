@@ -1,0 +1,12 @@
+<!-- Exclude CoreGateway Registry Events - Found excessively on wv22-studycast.onsite.local
+ --><!-- This configuration file excludes registry events related to the CoreGateway service from Sysmon logging. This is useful for reducing noise in logs and focusing on more relevant events. -->
+
+<Sysmon schemaversion="4.30">
+	<EventFiltering>
+		<RuleGroup name="" groupRelation="or">
+			<RegistryEvent onmatch="exclude">
+				<Image condition="is">d:\CoreGateway\bin\fd\FireDaemon.exe</Image>
+			</RegistryEvent>
+		</RuleGroup>
+	</EventFiltering>
+</Sysmon>
